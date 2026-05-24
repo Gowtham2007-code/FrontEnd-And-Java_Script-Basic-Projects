@@ -23,6 +23,25 @@ function pickComputerMove()
     return computerMove;
 }
 
+let isautoplaying = false;
+let Interval_id;
+
+function autoplay()
+{
+    if(!isautoplaying)
+    {
+        const playerMove = pickComputerMove();
+        Interval_id = setInterval(() => {playGame(playerMove)}, 1000);
+        isautoplaying = true;
+    }
+
+    else
+    {
+        clearInterval(Interval_id);
+        isautoplaying = false;
+    }
+}
+
 function playGame(playerMove)
 {
     let computerMove = pickComputerMove();
@@ -112,3 +131,7 @@ document.body.addEventListener('keydown', (event) => {
     else if(event.key === 'Enter')
         reSetScore();
 });
+
+const autoplayButton = document.querySelector('.js-autoplay-button');
+
+autoplayButton.addEventListener('click',() => {autoplay();});

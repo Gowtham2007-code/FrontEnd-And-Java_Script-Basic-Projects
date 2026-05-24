@@ -91,3 +91,16 @@ function addToDo3()
 
     rendertodoList2();
 }
+/*
+const inputOnKeyDown = document.querySelector('.js-input3');
+
+inputOnKeyDown.addEventListener('keydown',(enevt) => {
+    if(event.key === 'Enter')
+       addToDo3();
+});*/
+
+function handleOnKeyDown(event)
+{
+    if(event.key === 'Enter')
+        addToDo3();
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Advance Functions</title>
+</head>
+<body>
+    <button>button</button>
+    <script>
+        // Function are values.
+        let a = function() {
+            console.log('Hello');
+        }
+        console.log(a());
+
+        const object = {
+            name : 'Gowtham',
+            fun : function() {
+                console.log("HI");
+            }
+        };
+
+        console.log(object.fun());
+
+        function function1(param) {
+            param();
+        }
+
+        function1(function greting() { //call back function.
+            console.log("Hello");
+        });
+
+        setTimeout(() => {console.log('HI');}, 2000);
+
+        // setInterval(() => {console.log('HI');},2000);
+
+        // forEach Loop
+        const arr = [1,2,3,4,5];
+        
+        arr.forEach((value, index) => {console.log(value);});
+
+        // continue use as return in forEach Loop
+        // break is not used in forEach Loop.
+        arr.forEach((value) => {
+            if(value === 3)
+              return;
+            console.log(value);
+        });
+
+        // Arrow Functions.
+        const arrofunction = () => {console.log('hello');};
+        arrofunction();
+
+        // passing a parameter.
+        // for one parameter there is no need of brackets.
+        const oneparam = param => {return param + 5;};
+        console.log(oneparam(5));
+
+        //one Line Arro function
+        //const oneLine = () => {return 2 + 3;};
+        const oneLine = () => 2 + 3;
+        console.log(oneLine());
+
+        console.log(typeof oneparam);
+        console.log(typeof arr);
+        console.log(typeof {name : 'Gowtham'});
+        console.log(Array.isArray(arr));
+        console.log(Array.isArray(oneparam));
+        console.log(Array.isArray({name : 'Gowtham'}));
+
+        // EventListener 
+        const button = document.querySelector('button');
+        const buttonFunction = () => {console.log('click');};
+        // adding EventListener to button.
+        button.addEventListener('click', buttonFunction);
+
+        // we can also add multiple events to one button using EventListener.
+        button.addEventListener('click',() => {console.log('click2');});
+
+        // we can also remove event listiner.
+        button.removeEventListener('click', buttonFunction);
+    </script>
+</body>
+</html>

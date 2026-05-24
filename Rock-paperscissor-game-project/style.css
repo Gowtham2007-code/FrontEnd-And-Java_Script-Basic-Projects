@@ -36,7 +36,8 @@ body{
 .resultmove{
     height: 50px;
 }
-.resetScoreButton{
+.resetScoreButton,
+.autoplay-button {
     background-color: aqua;
     width: 160px;
     height: 60px;
@@ -49,13 +50,15 @@ body{
     font-size: 15px;
     margin-top: 15px;
     transition: transform 0.3s ease;
+    margin-left: 15px;
 }
-.resetScoreButton:hover{
+.resetScoreButton:hover,
+.autoplay-button:hover {
     background-color: rgb(25, 224, 224);
     transform: scale(1.1);
 }
-
 .Button:active,
-.resetScoreButton:active{
+.resetScoreButton:active,
+.autoplay-button:active {
     transform: scale(0.95);
 }

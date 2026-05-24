@@ -32,14 +32,18 @@
     <p style="margin-top: 50px;">Todo List Practice 3</p>
 
     <div class="todo-input-grid">
-        <input type="text" 
-               placeholder="Todo name"
-               class="input3 js-input3">
 
-        <input type="date" class="input-date js-input-date">
+    <input type="text" 
+           placeholder="Todo name"
+           class="input3 js-input3"
+           onkeydown="handleOnKeyDown(event);">
 
-        <button class="add-button3 js-add-button3"
-                onclick="addToDo3()">Add</button>
+    <input type="date" class="input-date js-input-date">
+
+    <button class="add-button3 js-add-button3"
+            onclick="addToDo3()">Add
+    </button>
+
     </div>
 
     <div class="js-todo-list2 todo-grid"></div>
