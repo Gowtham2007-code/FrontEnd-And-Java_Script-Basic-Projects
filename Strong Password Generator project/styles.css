@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+input {
+    background-color: aqua;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    color: black;
+    font-size: 15px;
+}
+button {
+    margin-left: 10px;
+    background-color: blue;
+    border: none;
+    height: 33px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 1px 1px 5px black;
+    transition: transform 0.3s ease;
+}
+button:hover {
+    transform: scale(1.1);
+    background-color: rgb(48, 48, 186);
+} 
+button:active {
+    transform: scale(0.95);
+    background-color: rgb(70, 70, 226);
+}
+div {
+    margin-top: 300px;
+}

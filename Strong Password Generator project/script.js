@@ -1,7 +1,9 @@
 let pass = document.querySelector('input');
 let display = document.querySelector('p');
 
-pass.addEventListener('input',() => {isStrongOrNot();});
+pass.addEventListener('input', () => {
+    isStrongOrNot();
+});
 
 function isStrongOrNot()
 {
@@ -14,53 +16,47 @@ function isStrongOrNot()
     for(let i = 0; i < password.length; i++)
     {
         let ch = password[i];
-    
+
         if(ch >= 'A' && ch <= 'Z')
             upperc++;
 
         else if(ch >= '0' && ch <= '9')
-            digitc++
-        
+            digitc++;
+
         else if(!(ch >= 'a' && ch <= 'z'))
             spec++;
     }
 
-    if(password.length > 7 && upperc >= 1 && digitc >=1 && spec >= 1)
+    if(password.length >= 8 && upperc >= 1 && digitc >= 1 && spec >= 1)
         display.innerHTML = 'Strong';
-
     else
         display.innerHTML = 'Weak';
 }
 
 let generateButton = document.querySelector('button');
 
-generateButton.addEventListener('click',() => {generateStrongPassword();});
+generateButton.addEventListener('click', () => {
+    generateStrongPassword();
+});
 
 function generateStrongPassword()
 {
-    let result = '';
+    let password = '';
 
     const small = 'abcdefghijklmnopqrstuvwxyz';
     const capital = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const numbers = '0123456789';
     const special = '!@#$%&?^';
 
-    // add at least one character from each type
-    result += small[Math.floor(Math.random() * small.length)];
-    result += capital[Math.floor(Math.random() * capital.length)];
-    result += numbers[Math.floor(Math.random() * numbers.length)];
-    result += special[Math.floor(Math.random() * special.length)];
-
-    // all possible characters
-    const all = small + capital + numbers + special;
-
-    // generate remaining characters
-    for(let i = 0; i < 4; i++)
+    for(let i = 0; i < 3; i++)
     {
-        result += all[Math.floor(Math.random() * all.length)];
+        password += small[Math.floor(Math.random() * small.length)];
+        password += capital[Math.floor(Math.random() * capital.length)];
+        password += numbers[Math.floor(Math.random() * numbers.length)];
+        password += special[Math.floor(Math.random() * special.length)];
     }
 
-    pass.value = result;
+    pass.value = password;
 
     isStrongOrNot();
 }
