@@ -10,20 +10,34 @@ input {
     border-radius: 5px;
     color: black;
     font-size: 15px;
+    padding: 20px;
+    width: 270px;
+    font-size: 16px;
+    box-shadow: 1px 2px 5px rgb(43, 42, 42);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+input:hover{
+    transform: scale(1.02);
+    background-color: rgb(71, 239, 239);
 }
 button {
     margin-left: 10px;
     background-color: blue;
     border: none;
     height: 33px;
-    border-radius: 5px;
+    border-radius: 7px;
+    height: 59px;
+    width: 95px;
     color: white;
     font-weight: bold;
-    box-shadow: 1px 1px 5px black;
+    font-size: 15px;
+    box-shadow: 1px 2px 5px rgb(43, 42, 42);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 button:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     background-color: rgb(48, 48, 186);
 } 
 button:active {
@@ -32,4 +46,15 @@ button:active {
 }
 div {
     margin-top: 300px;
+}
+label {
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(0, 0, 128);
+}
+p {
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(75, 225, 73);
 }
